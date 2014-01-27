@@ -11,9 +11,9 @@
 </style>
 
 <div class="container">
-  <ul>
-    <%[1,2,3,4,5].each do |num| %>
-      <li><%=num %> </li>
+  <ul id="sortable">
+    <%@list.each do |item| %>
+      <li class="people"><%=item.name %> </li>
     <%end%>
   </ul>
 </div>
