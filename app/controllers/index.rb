@@ -4,3 +4,8 @@ get '/' do
   # @list.order(position: :desc)
   erb :index
 end
+
+post '/ajax' do
+  input = params[:names].split("\n")
+  Item.update_location(input)
+end
